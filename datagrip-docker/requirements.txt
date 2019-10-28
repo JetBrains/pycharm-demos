@@ -1,0 +1,4 @@
+flask_sqlalchemy==2.4.1
+flask==1.1.1
+psycopg2==2.8.4
+python-dotenv==0.10.3

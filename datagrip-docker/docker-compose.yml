@@ -1,0 +1,13 @@
+version: '2.1'
+
+services:
+
+    pg_12.X:
+      # jdbc:postgresql://localhost:54333/guest?user=guest&amp;password=guest
+      container_name: pg_12.X
+      ports:
+      - "54333:5432"
+      image: postgres:12-alpine
+      env_file: .env
+      healthcheck:
+        test: "exit 0"
