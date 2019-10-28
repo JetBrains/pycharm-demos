@@ -1,1 +1,4 @@
-<h1>Hello From Jinja {{actor.first_name}}</h1>
+{% extends "actors.jinja2" %}
+{% block actor %}
+    <p>Hello To {{ actor.first_name }}</p>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "base.jinja2" %}
+{% block content %}
+    <div class="columns">
+        <div class="column is-one-fifth">
+            <aside class="menu">
+                <ul class="menu-list">
+                    <li><a href="/actors/1">Actor 1</a></li>
+                </ul>
+            </aside>
+        </div>
+        <div class="column">
+            {% block actor %}
+                Choose an actor from the menu.
+            {% endblock %}
+        </div>
+    </div>
+{% endblock %}
