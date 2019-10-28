@@ -31,3 +31,5 @@ This is in support of a November 2019 webinar Max is doing with PyCharm.
     - Set `Target:` to `app`
     
     - Set `Application:` to `app`
+    
+4. Run the config and go to `http://127.0.0.1:5000/actors/1`
