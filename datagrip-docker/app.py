@@ -1,7 +1,7 @@
 import os
 
 from dotenv import load_dotenv
-from flask import Flask
+from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
@@ -21,4 +21,4 @@ class Actor(db.Model):
 @app.route('/actors/<int:actor_id>')
 def index(actor_id):
     actor = Actor.query.filter_by(actor_id=actor_id).first()
-    return f'<h1>Hello {actor.first_name}</h1>'
+    return render_template('actor.jinja2', actor=actor)
