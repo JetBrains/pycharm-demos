@@ -3,6 +3,7 @@ import os
 import psycopg2
 from dotenv import load_dotenv
 from flask import Flask, render_template
+from psycopg2.extras import NamedTupleCursor
 
 load_dotenv()
 app = Flask(__name__)
@@ -22,7 +23,7 @@ def homepage_index():
 
 @app.route('/actors/')
 def actors_index():
-    with conn.cursor() as cur:
+    with conn.cursor(cursor_factory=NamedTupleCursor) as cur:
         cur.execute(actors_query)
         actors = cur.fetchall()
         cur.close()
@@ -33,7 +34,7 @@ def actors_index():
 
 @app.route('/actors/<int:actor_id>')
 def actor_index(actor_id):
-    with conn.cursor() as cur:
+    with conn.cursor(cursor_factory=NamedTupleCursor) as cur:
         cur.execute(actors_query)
         actors = cur.fetchall()
 
@@ -43,5 +44,5 @@ def actor_index(actor_id):
 
         cur.close()
 
-        title = f'Actor: {actor[1]} {actor[2]}'
+        title = f'Actor: {actor.first_name} {actor.last_name}'
         return render_template('actor.jinja2', actors=actors, actor=actor, title=title)

@@ -5,7 +5,7 @@
             <aside class="menu">
                 <ul class="menu-list">
                     {% for actor in actors %}
-                        <li><a href="/actors/{{ actor[0] }}">{{ actor[1] }} {{ actor[2] }}</a></li>
+                        <li><a href="/actors/{{ actor.actor_id }}">{{ actor.first_name }} {{ actor.last_name }}</a></li>
                     {% endfor %}
                 </ul>
             </aside>
