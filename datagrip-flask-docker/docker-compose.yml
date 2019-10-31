@@ -3,7 +3,7 @@ version: '2.1'
 services:
 
     pg_12.X:
-      # jdbc:postgresql://localhost:54333/guest?user=guest&amp;password=guest
+      # jdbc:postgresql://localhost:54333/guest
       container_name: pg_12.X
       ports:
       - "54333:5432"

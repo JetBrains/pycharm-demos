@@ -29,7 +29,6 @@ class Actor(db.Model):
 
 @app.route('/actors/')
 def actors_index():
-    # actor = Actor.query.filter_by(actor_id=actor_id).first()
     title = f'Actors'
     return render_template('actors.jinja2', title=title)
 
