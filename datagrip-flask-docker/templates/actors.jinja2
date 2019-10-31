@@ -4,7 +4,9 @@
         <div class="column is-one-fifth">
             <aside class="menu">
                 <ul class="menu-list">
-                    <li><a href="/actors/1">Actor 1</a></li>
+                    {% for actor in actors %}
+                        <li><a href="/actors/{{ actor.actor_id }}">{{ actor.first_name }} {{ actor.last_name }}</a></li>
+                    {% endfor %}
                 </ul>
             </aside>
         </div>
