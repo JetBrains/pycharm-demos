@@ -8,7 +8,7 @@ If you have a previous run of this, you’ll need to do some Docker and PyCharm:
 
 1. Shut down and remove any Docker containers with:
    ```shell script
-    $ docker container ls -a
+    $ docker-compose stop pg12 && docker-compose rm --force pg12
     $ docker container stop <container_id>
     $ docker rm <container_id>
     ```
@@ -19,17 +19,12 @@ If you have a previous run of this, you’ll need to do some Docker and PyCharm:
 
 ## Open Demo Directory In PyCharm
 
-Don’t open the repo, open one of the examples in the repo. E.g. this directory.
+Don’t open the *repo*, open one of the examples in the repo. E.g. this directory.
 
 ## Launch PG Container
 
-Do this:
-
-1. docker-compose up -d pg_12.X
-
-Not:
-1. Open docker-compose.yml
-2. Click the green play button beside pg_12.X
+1. Open `docker-compose.yml`
+2. Click the green play button beside pg12
 3. This uses values in the .env file
 
 ## Make a Database Connection
@@ -43,15 +38,16 @@ Not:
 
 ## Populate the schema and sample data
 
-1. Right-click on sample load-sakila-schema.sql
+1. Right-click on sample `load-sakila-schema.sql`
 2. Choose Run
 3. Click checkbox for execution target
 4. Click OK
+5. Same for `load-sakilia-data.sql`
 
 ## Make a Project Interpreter
 
 1. Settings -> Project -> Project Interpreter -> Gear symbol -> Add -> New environment
-2. Open requirements.txt and click Install Requirements
+2. Open `requirements.txt` and click Install Requirements link at the top
 
 ## Configure PyCharm
 

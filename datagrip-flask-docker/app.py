@@ -9,7 +9,7 @@ load_dotenv()
 app = Flask(__name__)
 app.config['TEMPLATES_AUTO_RELOAD'] = True
 
-conn = psycopg2.connect(os.environ['PGDSN'])
+conn = psycopg2.connect(os.environ['POSTGRES_DSN'])
 
 actors_query = 'SELECT actor_id, first_name, last_name FROM actor LIMIT 20'
 

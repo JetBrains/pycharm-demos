@@ -2,9 +2,9 @@ version: '2.1'
 
 services:
 
-    pg_12.X:
+    pg12:
       # jdbc:postgresql://localhost:54333/guest
-      container_name: pg_12.X
+      container_name: pg12
       ports:
       - "54333:5432"
       image: postgres:12-alpine
