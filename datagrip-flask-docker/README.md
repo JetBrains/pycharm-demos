@@ -2,6 +2,26 @@
 
 This demo is in support of a PyCharm-DataGrip webinar in November 2019.
 
+## Demo
+
+1. Show the repo page at GitHub
+2. Review how I set things up:
+    - Launched the container from docker-compose.yml
+    - Connected to the database
+    - Ran the two .sql files
+    - Made an interpreter with requirements.txt
+    - Set the template language to Jinja2
+    - Marked the folder as a templates folder
+    - Made a Flask Server run config
+3. Open app.py
+4. Run the app, look in browser
+5. Language Injection
+6. Autocomplete SQL grammar, table name, column name
+7. Expand wildcard to column names
+8. Navigation: Cmd-B to datasource, F4 to open table
+9. Execute a query that includes a parameter
+10. Refactoring, e.g. change a column name
+
 ## Cleanup
 
 If you have a previous run of this, you’ll need to do some Docker and PyCharm:
@@ -55,4 +75,4 @@ Don’t open the *repo*, open one of the examples in the repo. E.g. this directo
 2. Make a Flask run configuration:
     - Set `Target:` to `app`
     - Set `Application:` to `app`
-3. - Click the Flask Debug checkbox
+3. Click the Flask Debug checkbox
